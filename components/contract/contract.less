@@ -1,0 +1,346 @@
+@import "../../src/less/variables";
+
+@articleCollapsedColor: #626262;
+@articleExpanedColor: #4d96a1;
+@paragraphIdentLevel: 20px;
+
+.contractTitleBarButton() {
+  border-radius: 7px;
+  font-family: Arial;
+  color: @whiteColor;
+  font-size: 12px;
+  padding: 1px 12px 1px 12px;
+}
+
+.contractContentInputItem {
+  display: inline-block;
+}
+
+.formSectionTitle {
+  margin-bottom: 10px;
+  border-bottom: #999;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+  margin: 0 auto 10px;
+
+  h5 {
+    font: 1.2em/1.0em "fonts/ArmataRegular",Arial,sans-serif;
+    font-weight: bold;
+    color: #666;
+  }
+}
+
+.react-datepicker__input-container {
+  width: 100%;
+}
+
+.resizable {
+  overflow: auto;
+}
+
+.form-group>label.required::after {
+  content: "*";
+  margin-left: 5px;
+  position: absolute;
+}
+
+.form-group.has-feedback.has-error .Select-control {
+  border-color: #a94442;
+}
+
+.primaryButton {
+  background: #3498db;
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  .contractTitleBarButton();
+
+  &:hover {
+    color: @whiteColor;
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  }
+}
+
+.secondaryButton {
+  background-image: linear-gradient(to bottom, #333, #555);
+  .contractTitleBarButton();
+
+  &:hover {
+    color: @whiteColor;
+    background-image: linear-gradient(to bottom, #555, #777);
+  }
+}
+
+#contractTitleBar {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 15px;
+
+  h4 {
+    font: 18px "fonts/ArmataRegular",Arial,sans-serif;
+    margin: 2px 0 0 0;
+    font-weight:bold;
+    color:@emiColor;
+  }
+
+  h3 {
+    font: 21px "fonts/ArmataRegular",Arial,sans-serif;
+    margin: 0;
+    font-weight:bold;
+    color:@emiColor;
+  }
+}
+
+#contractContainer {
+  display: flex;
+  height: 100%;
+
+  #contractGridContent {
+    flex-grow: 1;
+  }
+}
+
+#contractEditorResizable {
+  min-height: 15%;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  box-shadow: 0 5px 2px #888888;
+  padding-bottom: 20px;
+}
+
+#contractEditorContainer {
+  height: 100%;
+}
+
+#contractEditor {
+  overflow-x: hidden;
+  height: calc(100% - 18px);
+
+  .formSectionTitle {
+    padding: 0 15px;
+  }
+
+  hr {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-top-width: 3px;
+  }
+
+  .Select-control, .Select-input {
+    height: 28px;
+  }
+
+  .Select-placeholder, .Select-value {
+    line-height: 28px;
+  }
+
+  .Select-arrow-zone {
+    vertical-align: inherit;
+  }
+
+  .form-group.has-feedback.has-changes {
+    .control-label {
+      color: @info;
+    }
+
+    .form-control, .react-selectize-control, .fileDrop{
+      border-color: @info;
+    }
+  }
+
+  .input-hint {
+    margin-right: 28px;
+    color: green;
+    margin-top: -1px;
+  }
+
+  textarea {
+    overflow: auto;
+  }
+}
+
+#resizableBar {
+  display: flex;
+  justify-content: space-between;
+  cursor: n-resize;
+  padding: 0 15px;
+}
+
+.resizbleButton {
+  margin-top: 1px;
+
+  div:first-child {
+    margin-bottom: -9px;
+  }
+}
+
+#contractContent {
+  padding: 10px 15px 0;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  border-top: none;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+
+  .panel {
+    margin-bottom: 4px;
+    border: none;
+  }
+
+  .panel-heading {
+    padding: 6px 0 7px 5px;
+    color: white;
+    border-radius: 0;
+    margin-bottom: 4px;
+    border: none;
+
+    .panel-title {
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .glyphicon {
+      margin-right: 5px;
+    }
+
+    img {
+      margin: 0 7px;
+    }
+  }
+
+  .contractParagraph {
+    margin-bottom: 10px;
+
+    &.indentLevel1{
+      padding-left: calc(1 * @paragraphIdentLevel);
+
+      .paragraphNumberingValue {
+        display: inline-block;
+        margin-left: calc(1 * (-@paragraphIdentLevel));
+        width: calc(1 * @paragraphIdentLevel)
+      }
+    }
+
+    &.indentLevel2{
+      padding-left: calc(2 * @paragraphIdentLevel);
+
+      .paragraphNumberingValue {
+        display: inline-block;
+        margin-left: calc(1 * (-@paragraphIdentLevel));
+        width: calc(1 * @paragraphIdentLevel)
+      }
+    }
+
+    &.indentLevel3{
+      padding-left: calc(3 * @paragraphIdentLevel);
+
+      .paragraphNumberingValue {
+        display: inline-block;
+        margin-left: calc(1 * (-@paragraphIdentLevel));
+        width: calc(1 * @paragraphIdentLevel)
+      }
+    }
+
+    .textItem:after {
+      content: "\00a0";
+    }
+
+    .textItemBlock {
+      display: block;
+    }
+
+    .textItemBold {
+      font-weight: bold;
+    }
+  }
+
+  .coverHeading {
+    background-color: #3c79fb;
+  }
+
+  .chapterHeading {
+    background-color: @emiColor;
+  }
+
+  .articleCollapsed .panel-heading {
+    background-color: @articleCollapsedColor;
+    padding-left: 20px;
+  }
+
+  .articleExpaned .panel-heading {
+    background-color: @articleExpanedColor;
+    padding-left: 20px;
+  }
+
+  .annexHeading {
+    background-color: #140054;
+  }
+
+  .textInput {
+    padding: 0 5px;
+    line-height: 15px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+  }
+
+  .dateTimePicker {
+    padding: 0 5px;
+    line-height: 15px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+
+    &:focus {
+       border-color: @focusBorderColor;
+    }
+  }
+
+  .react-autosuggest__input {
+    width: 280px;
+    line-height: 15px;
+    padding: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  .specOptionActive {
+    border: solid 1px #66afe9;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+  }
+
+  #annex2 {
+    &.specOptionActive {
+      border-width: 0px;
+    }
+    td, th {
+      vertical-align: middle;
+      text-align: center;
+    }
+    #annex2ColumnsHeader {
+      text-align: right;
+    }
+    #annex2RowsHeader {
+      text-align: left;
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+#contractContentTitle {
+  color: @emiColor;
+  font-size: 12px;
+
+  a {
+    margin-left: 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  img {
+    margin: 0 4px 3px 0;
+  }
+}

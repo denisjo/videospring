@@ -1,0 +1,65 @@
+@import "../../../src/less/variables";
+
+#constractSidebarWrapper{
+  transition: margin-left 1s;
+  transition-timing-function: cubic-bezier(0.175, 0.8, 0.175, 1), linear;
+  min-width: 270px;
+
+  &.isCollapsed {
+    margin-left: -250px;
+  }
+}
+
+#constractSidebar {
+  position: absolute;
+  height: 100%;
+}
+
+#constractSidebarContent {
+  background-color: @emiColor;
+  color: @whiteColor;
+  height: 100%;
+  width: 250px;
+  float:left;
+  padding: 0 5px;
+  border-top-right-radius: 2px;
+
+  h4 {
+    border-bottom: 1px solid white;
+    margin: 15px 15px 5px 0;
+    span {
+      margin-left: 5px;
+    }
+  }
+
+  p {
+    margin-left: 10px;
+    font-size: 13px;
+  }
+
+  #poolCode {
+    text-decoration: underline;
+    color: white;
+  }
+}
+
+#sidebarCollapse {
+  height: 80px;
+  background-color: @emiColor;
+  width: 16px;
+  display: inline-block;
+  margin-top: 33px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  cursor: pointer;
+
+  .glyphicon {
+    color: @whiteColor;
+    font-size: x-small;
+    margin: 0 0 6px 3px;
+
+    &:first-child {
+      margin: 5px 0 15px 3px;
+    }
+  }
+}

@@ -1,0 +1,147 @@
+@headerHeigth : 73px;
+@menuHeight: 33px;
+@menuColor: #1A4E75;
+
+.background-image-middle-allign(@url, @left: 40px) {
+  padding-left: @left;
+  background-image: url(@url);
+  background-repeat: no-repeat;
+  background-position-x: 0;
+  background-position-y: 50%;
+}
+
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.navbar {
+  border: none;
+}
+
+.dropdown-item {
+  color: @menuColor;
+
+  span {
+    display: block;
+  }
+
+  .dropdown-item-title {
+    font-weight: bold;
+  }
+}
+
+#headerNavBar {
+  background-color: white;
+  height: @headerHeigth;
+  margin-bottom: 0px;
+
+  a.navbar-brand img {
+    margin-top: -10px;
+    position: absolute;
+    z-index: 10;
+  }
+
+  .navbar-nav>li>.dropdown-menu {
+    border-radius: 5px;
+  }
+
+  .navbar-nav>li>a {
+    line-height: @headerHeigth;
+    height: @headerHeigth;
+    padding-top: 0;
+    color: @menuColor;
+    font-weight: bold;
+    border-right:  1px solid #AAAAAA;
+  }
+}
+
+#homeNav a {
+  .background-image-middle-allign('../../assets/images/icon_home.png', 30);
+}
+
+#help-nav-dropdown {
+  margin-left: 10px;
+  .background-image-middle-allign('../../assets/images/icon_help.png');
+}
+
+#helpMenuItem {
+  .background-image-middle-allign('../../assets/images/icon_iknow2.png');
+}
+
+#versionMenuItem {
+  .background-image-middle-allign('../../assets/images/about_icon.png');
+}
+
+#profile-nav-dropdown {
+  margin-left: 10px;
+  .background-image-middle-allign('../../assets/images/icon_user.png');
+  border-right: none !important;
+}
+
+#profileMenuItem {
+  .background-image-middle-allign('../../assets/images/profil_icon.png');
+}
+
+#taskMenuItem {
+  .background-image-middle-allign('../../assets/images/task_icon.png');
+}
+
+#logoutMenuItem {
+  .background-image-middle-allign('../../assets/images/logout_icon.png');
+}
+
+#mainMenu {
+  background-color: @menuColor;
+  border-radius: 0px;
+  height: @menuHeight;
+  min-height: @menuHeight;
+  padding-left: 140px;
+  margin-bottom: 5px;
+
+  li>.dropdown-menu {
+    border: 1px solid @menuColor;
+    border-radius: 0;
+    margin-top: -1px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .navbar-nav>li>a {
+    color: white;
+    padding-top: 6px;
+    padding-bottom: 7px;
+    z-index: 100;
+
+    &:hover {
+      background-color: white;
+      color: #1A4F75;
+      padding-top: 3px;
+      border-top: 3px solid;
+    }
+  }
+
+  .dropdown-menu>li:not(:first-child) {
+    border-top: 1px solid @menuColor;
+  }
+
+  .caret {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px dashed;
+  }
+}
+
+#menuSearch {
+  padding-top: 5px;
+  input {
+    line-height: normal;
+    border: 1px solid #3797CC;
+    color: #2A7BAD;
+    margin-right: 7px;
+  }
+  select {
+    border: 1px solid #3797CC;
+    color: #2A7BAD;
+    margin-right: 10px;
+  }
+}

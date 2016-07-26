@@ -1,0 +1,10 @@
+**/node_modules/*
+**/**.less
+.vscode/*
+assets/*
+build/*
+dist/*
+json/*
+**/karma.*.js
+**/webpack.*.js
+**/src/test/*

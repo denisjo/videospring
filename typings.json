@@ -1,0 +1,13 @@
+{
+  "name": "reactproject",
+  "version": false,
+  "dependencies": {
+    "lodash": "registry:npm/lodash#4.0.0+20160412191219"
+  },
+  "ambientDependencies": {
+    "axios": "registry:dt/axios#0.9.1+20160317120654",
+    "react": "registry:dt/react#0.14.0+20160412154040",
+    "react-bootstrap": "registry:dt/react-bootstrap#0.0.0+20160423135514",
+    "react-router": "registry:dt/react-router#2.0.0+20160423062133"
+  }
+}
