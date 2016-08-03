@@ -1,11 +1,11 @@
 import React, {Component, PropTypes} from 'react';
 import {withRouter, routerShape} from 'react-router';
 
-import ContractStore from 'stores/contractStore';
-import ContractActions from 'contractActions';
-import Contract from 'contract';
-import GlobalStateManager from 'services/globalStateManager';
-import {CONTRACT_BASE, EMI_MANAGE_POOL} from 'configConstants';
+//import ContractStore from 'stores/contractStore';
+//import ContractActions from 'contractActions';
+//import Contract from 'contract';
+//import GlobalStateManager from 'services/globalStateManager';
+//import {CONTRACT_BASE, EMI_MANAGE_POOL} from 'configConstants';
 
 class AdminController extends Component {
   constructor(props) {
@@ -60,10 +60,10 @@ class AdminController extends Component {
   }
 }
 
-AdminController.propTypes = {
+/*AdminController.propTypes = {
   params: PropTypes.object.isRequired,
   router: routerShape,
   route: PropTypes.object.isRequired,
-};
+};*/
 
 export default withRouter(AdminController);

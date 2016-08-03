@@ -3,7 +3,6 @@ import React, {PropTypes} from 'react';
 const App = ({children}) => (
   <div>
     <h1>Hello world</h1>
-    {children}
   </div>
 );
 
