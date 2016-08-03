@@ -55,7 +55,7 @@ class AdminController extends Component {
     version by clicking on the Amendment number.`;
     */
     return (
-      <div>Hello you</div>
+      <h1>Hello you</h1>
     );
   }
 }
