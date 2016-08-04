@@ -7,7 +7,7 @@ import {withRouter, routerShape} from 'react-router';
 //import GlobalStateManager from 'services/globalStateManager';
 //import {CONTRACT_BASE, EMI_MANAGE_POOL} from 'configConstants';
 
-class AdminController extends Component {
+class SerieCustomizerController extends Component {
   constructor(props) {
     super(props);
 
@@ -55,7 +55,7 @@ class AdminController extends Component {
     version by clicking on the Amendment number.`;
     */
     return (
-      <h1>Administration</h1>
+      <h1>Customizing Serie</h1>
     );
   }
 }
@@ -66,4 +66,4 @@ class AdminController extends Component {
   route: PropTypes.object.isRequired,
 };*/
 
-export default withRouter(AdminController);
+export default withRouter(SerieCustomizerController);

@@ -7,9 +7,12 @@ import App from 'app';
 //import EditContractController from 'controllers/editContractController';
 //import CreateAmendmentController from 'controllers/createAmendmentController';
 import AdminController from 'controllers/adminController';
+import SerieCustomizerController from 'controllers/serieCustomizerController';
 
 export default (
-  <Route path="/" component={App}>
+  <div>
+    <Route path="/" component={App} />
     <Route path="/admin" component={AdminController} />
-  </Route>
+    <Route path="/customize" component={SerieCustomizerController} />
+  </div>
 );
