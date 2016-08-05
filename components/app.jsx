@@ -1,9 +1,12 @@
 import React, {PropTypes} from 'react';
+import SerieItem from 'serieItem';
 
 const App = ({children}) => (
   <div>
-    <h1>Hello world</h1>
-    {children}
+    <h1>List of Series</h1>
+    <SerieItem />
+    <SerieItem />
+    <SerieItem />
   </div>
 );
 

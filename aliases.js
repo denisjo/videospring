@@ -24,6 +24,9 @@ module.exports = {
   textInput: 'components/inputs/textInput',
   textItem: 'components/contract/textItem',
   inputs: 'components/inputs',
+
+  //TODO remove all before this
+  serieItem: 'components/serie/serieItem',
   // Common
   collapsibleControl: 'components/common/collapsibleControl',
   loader: 'components/common/loader',
