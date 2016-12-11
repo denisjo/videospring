@@ -19,7 +19,7 @@ class SerieItem extends Component {
 
     return (
       <div>
-      <Col className="col-md-3">
+      <Col className="col-lg-3 col-md-4 col-xs-6">
         <Row>
           <video controls="controls">
             <source src="http://jdlabs.spyweb.be/AfterEffects3DTracking.mp4" type="video/mp4" />
@@ -28,7 +28,7 @@ class SerieItem extends Component {
         <Row>Light details</Row>
         <div fluid id="contractTitleBar">
           <h4>Contract tool</h4>
-          <h3>TODO : put Serie Name</h3>
+          <h3>TODO : Serie Name</h3>
             
         </div>
         </Col>

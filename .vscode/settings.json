@@ -1,0 +1,5 @@
+// Placez vos paramètres dans ce fichier pour remplacer les paramètres par défaut et les paramètres utilisateur.
+{
+    // Chemin d'accès à l'exécutable git
+    "git.path": "C:/Program Files/Git/bin"
+}

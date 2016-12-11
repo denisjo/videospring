@@ -26,6 +26,7 @@ module.exports = {
   inputs: 'components/inputs',
 
   //TODO remove all before this
+  serie: 'components/serie/serie',
   serieItem: 'components/serie/serieItem',
   // Common
   collapsibleControl: 'components/common/collapsibleControl',
