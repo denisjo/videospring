@@ -10,20 +10,19 @@ class SerieItem extends Component {
 
     return (
       <div>
-      <Col className="col-lg-4 col-md-6 col-xs-12">
-        <div className="card">
-          <div className="card-header">
-          <video controls="controls">
-            <source src={this.props.previewUrl} type="video/mp4" />
-          </video>
+        <Col className="col-lg-4 col-md-6 col-xs-12">
+          <div className="card">
+            <div className="card-header">
+              <video controls="controls" poster={this.props.videoCover}>
+                <source src={this.props.previewUrl} type="video/mp4" />
+              </video>
+            </div>
+            <div className="card-content">
+              <h4>{this.props.title}</h4>
+            </div>
+            <div className="card-footer">
+            </div>
           </div>
-          <Row>Light details</Row>
-          <div fluid id="contractTitleBar">
-            <h4>Contract tool</h4>
-            <h3>TODO : Serie Name</h3>
-              
-          </div>
-        </div>
         </Col>
       </div>
     );
@@ -32,6 +31,7 @@ class SerieItem extends Component {
 
 SerieItem.propTypes = {
   previewUrl: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default SerieItem;

@@ -22,13 +22,24 @@ class Serie extends Component {
     const serieItems = [];
     serieItems.push(...data.serie.items.map(item => {
        return (
-          <SerieItem previewUrl = {item.previewUrl}/>
+          <SerieItem previewUrl={item.previewUrl}
+                      videoCover={item.videoCover}
+                      title={item.title}/>
        );
     }));
     return (
 
       <div>
-        <h1>{data.serie.name}</h1>
+        <Row>
+          <Col className="col-lg-8 col-md-6 col-xs-12">
+            <video poster={data.serie.videoCover}>
+              <source src={data.serie.previewUrl} type="video/mp4" />
+            </video>
+          </Col>
+          <Col className="col-lg-4 col-md-6 col-xs-12">
+            <h1>{data.serie.name}</h1>
+          </Col>
+        </Row>
         <Row>
             {serieItems}
         </Row>
