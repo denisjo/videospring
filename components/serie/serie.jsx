@@ -1,6 +1,9 @@
 import React, {Component, PropTypes} from 'react';
+import SerieItem from 'serieItem';
 import {Grid, Col, Row, Alert, ButtonToolbar} from 'react-bootstrap';
 import _ from 'lodash';
+
+var data = require('./data.json');
 
 
 class Serie extends Component {
@@ -16,38 +19,26 @@ class Serie extends Component {
         </div>
       );
     }*/
-
+    const serieItems = [];
+    serieItems.push(...data.serie.items.map(item => {
+       return (
+          <SerieItem previewUrl = {item.previewUrl}/>
+       );
+    }));
     return (
+
       <div>
+        <h1>{data.serie.name}</h1>
         <Row>
-            
+            {serieItems}
         </Row>
       </div>
     );
   }
 }
 
-/*SerieItem.propTypes = {
-  loading: PropTypes.bool,
-  alertMessage: PropTypes.string,
-  contractInfo: PropTypes.object,
-  previousContractInfo: PropTypes.object,
-  datesRules: PropTypes.object,
-  document: PropTypes.object,
-  specOptionsInfo: PropTypes.array,
-  generalOptionsInfo: PropTypes.array,
-  view: PropTypes.object,
-  applyValidation: PropTypes.bool,
-  contractNumber: PropTypes.string,
-  isViewMode: PropTypes.bool,
-  titleBarInfo: PropTypes.shape({
-    label: PropTypes.string.isRequired,
-    primaryButtonLabel: PropTypes.string.isRequired,
-    primaryButtonCallback: PropTypes.func,
-    primaryButtonHref: PropTypes.string,
-    secondaryButtonLabel: PropTypes.string.isRequired,
-    secondaryButtonHref: PropTypes.string.isRequired,
-  }),
+/*Serie.propTypes = {
+  serieItems: PropTypes.array,
 };*/
 
 export default Serie;

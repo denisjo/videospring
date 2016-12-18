@@ -21,6 +21,10 @@ var loaders = [
   {
     test: /\.(png|jpg|jpeg|eot|ttf|gif|svg|woff|woff2)$/,
     loader: "url?limit=100000"
+  },
+  {
+    test: /\.json$/,
+    loader: 'json-loader'
   }
 ];
 
@@ -55,7 +59,7 @@ module.exports = {
 	devtool: 'inline-source-map',
 	resolve: {
     root: path.resolve(__dirname),
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['', '.js', '.jsx','.json'],
     alias: aliases
 	},
 	devServer: {

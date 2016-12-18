@@ -1,0 +1,23 @@
+{
+    "serie":{
+        "name": "My Serie",
+        "items":[
+            {
+                "id" : "1",
+                "title" : "First Item",
+                "previewUrl":"http://jdlabs.spyweb.be/AfterEffects3DTracking.mp4"
+            },
+            {
+                "id" : "2",
+                "title" : "Second Item",
+                "previewUrl":"http://jdlabs.spyweb.be/AfterEffects3DTracking.mp4"
+            },
+            {
+                "id" : "3",
+                "title" : "Third Item",
+                "previewUrl":"http://jdlabs.spyweb.be/AfterEffects3DTracking.mp4"
+            }
+
+        ]
+    }
+}
