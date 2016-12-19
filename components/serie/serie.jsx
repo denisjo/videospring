@@ -32,7 +32,7 @@ class Serie extends Component {
       <div>
         <Row>
           <Col className="col-lg-8 col-md-6 col-xs-12">
-            <video poster={data.serie.videoCover}>
+            <video className="video-js" poster={data.serie.videoCover} preload="auto" controls data-setup="{}">
               <source src={data.serie.previewUrl} type="video/mp4" />
             </video>
           </Col>
