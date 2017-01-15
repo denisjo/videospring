@@ -1,12 +1,11 @@
 import React, {PropTypes} from 'react';
-import Serie from 'serie';
+import Series from 'series';
 import MainMenu from 'mainMenu';
 
 const App = ({children}) => (
   <div>
-    <MainMenu />
     <h1>List of Series</h1>
-    <Serie />
+    <Series />
   </div>
 );
 

@@ -21,5 +21,43 @@
             }
 
         ]
-    }
+    },
+    "series": [
+        {
+            "id" : "1",
+            "name" : "Academic",
+            "previewUrl" : "http://jdlabs.spyweb.be/series/Academic_SeriePreview.mp4",
+            "videoCover" : "http://jdlabs.spyweb.be/series/Academic_VideoCover.jpg"
+        },
+        {
+            "id" : "2",
+            "name" : "Color Panel",
+            "previewUrl" : "http://jdlabs.spyweb.be/series/Academic_SeriePreview.mp4",
+            "videoCover" : "http://jdlabs.spyweb.be/series/Academic_VideoCover.jpg"
+        },
+        {
+            "id" : "3",
+            "name" : "Academic",
+            "previewUrl" : "http://jdlabs.spyweb.be/series/Academic_SeriePreview.mp4",
+            "videoCover" : "http://jdlabs.spyweb.be/series/Academic_VideoCover.jpg"
+        },
+        {
+            "id" : "4",
+            "name" : "Academic",
+            "previewUrl" : "http://jdlabs.spyweb.be/series/Academic_SeriePreview.mp4",
+            "videoCover" : "http://jdlabs.spyweb.be/series/Academic_VideoCover.jpg"
+        },
+        {
+            "id" : "5",
+            "name" : "Academic",
+            "previewUrl" : "http://jdlabs.spyweb.be/series/Academic_SeriePreview.mp4",
+            "videoCover" : "http://jdlabs.spyweb.be/series/Academic_VideoCover.jpg"
+        },
+        {
+            "id" : "6",
+            "name" : "Academic",
+            "previewUrl" : "http://jdlabs.spyweb.be/series/Academic_SeriePreview.mp4",
+            "videoCover" : "http://jdlabs.spyweb.be/series/Academic_VideoCover.jpg"
+        }
+    ]
 }
