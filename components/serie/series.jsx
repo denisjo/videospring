@@ -41,14 +41,16 @@ class Series extends Component {
        return (
            
             <Col className="col-lg-3 col-md-3 col-xs-6 card">
-              <a href="/" onMouseEnter={this.playVideo.bind(this, serie.id)} 
-                          onMouseLeave={this.pauseVideo.bind(this, serie.id)}>
-                <img src={serie.videoCover}  />
-                <video id={serie.id} ref={(video) => {this.state.video[serie.id] = video;}}  poster={serie.videoCover} preload="auto" loop data-setup="{}" >
-                  <source src={serie.previewUrl} type="video/mp4" />
-                </video>
-              </a>
-              <h3>{serie.name}</h3>
+              <div className="card-preview">
+                <a href="/" onMouseEnter={this.playVideo.bind(this, serie.id)} 
+                            onMouseLeave={this.pauseVideo.bind(this, serie.id)}>
+                  <img src={serie.videoCover}  />
+                  <video id={serie.id} ref={(video) => {this.state.video[serie.id] = video;}}  poster={serie.videoCover} preload="auto" loop data-setup="{}" >
+                    <source src={serie.previewUrl} type="video/mp4" />
+                  </video>
+                </a>
+                <h3>{serie.name}</h3>
+              </div>
             </Col>
        );
     }));
