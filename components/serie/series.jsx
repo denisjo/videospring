@@ -40,7 +40,7 @@ class Series extends Component {
     series.push(...data.series.map(serie => {
        return (
            
-            <Col className="col-lg-3 col-md-3 col-xs-6 card">
+            <Col className="col-lg-3 col-md-3 col-xs-6 card" key={serie.id}>
               <div className="card-preview">
                 <a href="/" onMouseEnter={this.playVideo.bind(this, serie.id)} 
                             onMouseLeave={this.pauseVideo.bind(this, serie.id)}>
