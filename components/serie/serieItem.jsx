@@ -1,6 +1,8 @@
 import React, {Component, PropTypes} from 'react';
 import {Grid, Col, Row, Alert, ButtonToolbar} from 'react-bootstrap';
 
+import VideoPreview from 'videoPreview';
+
 class SerieItem extends Component {
   constructor(props) {
     super(props);
@@ -9,13 +11,11 @@ class SerieItem extends Component {
   render() {
 
     return (
-      <div>
-        <Col className="col-lg-4 col-md-6 col-xs-12">
+      <Row>
+        <Col className="col-lg-3 col-md-6 col-xs-12">
           <div className="card">
             <div className="card-header">
-              <video controls="controls" poster={this.props.videoCover}>
-                <source src={this.props.previewUrl} type="video/mp4" />
-              </video>
+              <VideoPreview id={this.props.id} cover={this.props.cover} previewUrl={this.props.previewUrl}/>
             </div>
             <div className="card-content">
               <h4>{this.props.title}</h4>
@@ -24,13 +24,15 @@ class SerieItem extends Component {
             </div>
           </div>
         </Col>
-      </div>
+      </Row>
     );
   }
 }
 
 SerieItem.propTypes = {
+  id: PropTypes.string,
   previewUrl: PropTypes.string,
+  cover: PropTypes.string,
   title: PropTypes.string,
 };
 

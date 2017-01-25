@@ -22,8 +22,8 @@ class Serie extends Component {
     const serieItems = [];
     serieItems.push(...data.serie.items.map(item => {
        return (
-          <SerieItem previewUrl={item.previewUrl}
-                      videoCover={item.videoCover}
+          <SerieItem id={item.id} previewUrl={item.previewUrl}
+                      cover={item.videoCover}
                       title={item.title}/>
        );
     }));
@@ -40,9 +40,8 @@ class Serie extends Component {
             <h1>{data.serie.name}</h1>
           </Col>
         </Row>
-        <Row>
-            {serieItems}
-        </Row>
+        
+        {serieItems}
       </div>
     );
   }

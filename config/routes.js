@@ -9,15 +9,15 @@ import App from 'app';
 import AdminController from 'controllers/adminController';
 import SerieCustomizerController from 'controllers/serieCustomizerController';
 import SerieController from 'controllers/serieController';
+import Serie from 'serie';
 
 export default (
   <div>
     <Router history={browserHistory}>
-    <Route path="/" component={App} >
-      <Route path="/serie/:serieId/:serieName" component={SerieController}/>
-    </Route>
-    <Route path="admin" component={AdminController} />
-    <Route path="customize" component={SerieCustomizerController} />
+      <Route path="/" component={App} />
+      <Route path="/serie/:serieId/:serieName" component={Serie}/>
+      <Route path="admin" component={AdminController} />
+      <Route path="customize" component={SerieCustomizerController} />
     </Router>
   </div>
 );

@@ -1,5 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {Grid, Col, Row, Alert, ButtonToolbar} from 'react-bootstrap';
+import {Link} from 'react-router';
+import VideoPreview from 'videoPreview';
 import _ from 'lodash';
 
 var data = require('./data.json');
@@ -12,19 +14,6 @@ class Series extends Component {
         video : [],
         imgVisible : true,
     };
-  }
-
-  playVideo(id, event) {
-    console.log("Play + " + id);
-    this.state.imgVisible = false;
-    this.state.video[id].play();
-  }
-
-  pauseVideo(id, event) {
-    console.log("Pause + " + id);
-    this.state.imgVisible = true;
-    this.state.video[id].pause();
-    this.state.video[id].currentTime = 0;
   }
 
   render() {
@@ -40,15 +29,11 @@ class Series extends Component {
     series.push(...data.series.map(serie => {
        return (
            
-            <Col className="col-lg-3 col-md-3 col-xs-6 card">
+            <Col className="col-lg-3 col-md-3 col-xs-6 card" key={serie.id}>
               <div className="card-preview">
-                <a href="/" onMouseEnter={this.playVideo.bind(this, serie.id)} 
-                            onMouseLeave={this.pauseVideo.bind(this, serie.id)}>
-                  <img src={serie.videoCover}  />
-                  <video id={serie.id} ref={(video) => {this.state.video[serie.id] = video;}}  poster={serie.videoCover} preload="auto" loop data-setup="{}" >
-                    <source src={serie.previewUrl} type="video/mp4" />
-                  </video>
-                </a>
+                <Link to={`/serie/${serie.id}/${serie.name}`} >
+                  <VideoPreview id={serie.id} cover={serie.videoCover} previewUrl={serie.previewUrl}/>
+                </Link>
                 <h3>{serie.name}</h3>
               </div>
             </Col>

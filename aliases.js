@@ -33,6 +33,7 @@ module.exports = {
   collapsibleControl: 'components/common/collapsibleControl',
   loader: 'components/common/loader',
   panel: 'components/common/panel',
+  videoPreview: 'components/common/videoPreview',
   // Controllers
   controllers: 'components/controllers/',
 

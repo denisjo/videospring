@@ -7,22 +7,31 @@
             {
                 "id" : "1",
                 "title" : "First Item",
-                "previewUrl":"http://jdlabs.spyweb.be/AfterEffects3DTracking.mp4"
+                "previewUrl":"http://jdlabs.spyweb.be/AfterEffects3DTracking.mp4",
+                "videoCover" : "http://jdlabs.spyweb.be/series/Academic_VideoCover.jpg"
             },
             {
                 "id" : "2",
                 "title" : "Second Item",
-                "previewUrl":"http://jdlabs.spyweb.be/AfterEffects3DTracking.mp4"
+                "previewUrl":"http://jdlabs.spyweb.be/AfterEffects3DTracking.mp4",
+                "videoCover" : "http://jdlabs.spyweb.be/series/Academic_VideoCover.jpg"
             },
             {
                 "id" : "3",
                 "title" : "Third Item",
-                "previewUrl":"http://jdlabs.spyweb.be/AfterEffects3DTracking.mp4"
+                "previewUrl":"http://jdlabs.spyweb.be/AfterEffects3DTracking.mp4",
+                "videoCover" : "http://jdlabs.spyweb.be/series/Academic_VideoCover.jpg"
             }
 
         ]
     },
     "series": [
+        {
+            "id" : "3",
+            "name" : "Milestone",
+            "previewUrl" : "http://jdlabs.spyweb.be/series/Milestone_SeriePreview_1.mp4",
+            "videoCover" : "http://jdlabs.spyweb.be/series/Milestone_VideoCover.jpg"
+        },
         {
             "id" : "1",
             "name" : "Academic",
@@ -35,12 +44,7 @@
             "previewUrl" : "http://jdlabs.spyweb.be/series/Academic_SeriePreview.mp4",
             "videoCover" : "http://jdlabs.spyweb.be/series/Academic_VideoCover.jpg"
         },
-        {
-            "id" : "3",
-            "name" : "Academic",
-            "previewUrl" : "http://jdlabs.spyweb.be/series/Academic_SeriePreview.mp4",
-            "videoCover" : "http://jdlabs.spyweb.be/series/Academic_VideoCover.jpg"
-        },
+        
         {
             "id" : "4",
             "name" : "Academic",
