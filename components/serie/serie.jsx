@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import SerieItem from 'serieItem';
+import SerieComponent from 'serieComponent';
 import {Grid, Col, Row, Alert, ButtonToolbar} from 'react-bootstrap';
 import _ from 'lodash';
 
@@ -20,16 +20,16 @@ class Serie extends Component {
       );
     }*/
     const serieItems = [];
-    serieItems.push(...data.serie.items.map(item => {
+    serieItems.push(...data.serie.components.map(component => {
        return (
-          <SerieItem id={item.id} previewUrl={item.previewUrl}
-                      cover={item.videoCover}
-                      title={item.title}/>
+          <SerieComponent key={component.id} id={component.id} previewUrl={component.previewUrl}
+                      cover={component.videoCover}
+                      title={component.title}/>
        );
     }));
     return (
 
-      <div>
+      <div key={data.serie.id}>
         <Row>
           <Col className="col-lg-8 col-md-6 col-xs-12">
             <video className="video-js" poster={data.serie.videoCover} preload="auto" controls data-setup="{}">

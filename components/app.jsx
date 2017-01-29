@@ -10,11 +10,12 @@ const App = ({children}) => (
       <p></p>
     </section>
     <section className="preview">
-    <h1>Series</h1>
-    <p>Discover our designer quality video elements library for your projects</p>
-    <Series />
+      <h1>Series</h1>
+      <p>Discover our designer quality video elements library for your projects</p>
+      <Series />
     </section>
   </div>
+
 );
 
 App.propTypes = {

@@ -31,7 +31,7 @@ class Series extends Component {
            
             <Col className="col-lg-3 col-md-3 col-xs-6 card" key={serie.id}>
               <div className="card-preview">
-                <Link to={`/serie/${serie.id}/${serie.name}`} >
+                <Link to={`serie/${serie.id}/${serie.name}/`} >
                   <VideoPreview id={serie.id} cover={serie.videoCover} previewUrl={serie.previewUrl}/>
                 </Link>
                 <h3>{serie.name}</h3>

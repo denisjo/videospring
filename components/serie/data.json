@@ -3,7 +3,7 @@
         "name": "Academic",
         "previewUrl" : "http://jdlabs.spyweb.be/series/Academic_SeriePreview.mp4",
         "videoCover" : "http://jdlabs.spyweb.be/series/Academic_VideoCover.jpg",
-        "items":[
+        "components":[
             {
                 "id" : "1",
                 "title" : "First Item",
@@ -20,7 +20,18 @@
                 "id" : "3",
                 "title" : "Third Item",
                 "previewUrl":"http://jdlabs.spyweb.be/AfterEffects3DTracking.mp4",
-                "videoCover" : "http://jdlabs.spyweb.be/series/Academic_VideoCover.jpg"
+                "videoCover" : "http://jdlabs.spyweb.be/series/Academic_VideoCover.jpg",
+                "items" : [
+                    {
+                        
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ]
             }
 
         ]
@@ -40,9 +51,9 @@
         },
         {
             "id" : "2",
-            "name" : "Color Panel",
-            "previewUrl" : "http://jdlabs.spyweb.be/series/Academic_SeriePreview.mp4",
-            "videoCover" : "http://jdlabs.spyweb.be/series/Academic_VideoCover.jpg"
+            "name" : "Color Palette",
+            "previewUrl" : "http://jdlabs.spyweb.be/series/ColorPalette_SeriePreview.mp4",
+            "videoCover" : "http://jdlabs.spyweb.be/series/ColorPalette_VideoCover.jpg"
         },
         
         {

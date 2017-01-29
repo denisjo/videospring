@@ -16,13 +16,11 @@ class VideoPreview extends Component {
   }
 
   playVideo(event) {
-    console.log("Play + " + this.props.id);
     this.state.imgVisible = false;
     this.state.video.play();
   }
 
   pauseVideo(event) {
-    console.log("Pause + " + this.props.id);
     this.state.imgVisible = true;
     this.state.video.pause();
     this.state.video.currentTime = 0;

@@ -28,7 +28,7 @@ module.exports = {
   //TODO remove all before this
   serie: 'components/serie/serie',
   series: 'components/serie/series',
-  serieItem: 'components/serie/serieItem',
+  serieComponent: 'components/serie/serieComponent',
   // Common
   collapsibleControl: 'components/common/collapsibleControl',
   loader: 'components/common/loader',
