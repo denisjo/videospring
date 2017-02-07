@@ -1,5 +1,6 @@
 {
-    "serie": {
+    "series": [{
+        "id": "1",
         "name": "Academic",
         "previewUrl" : "http://jdlabs.spyweb.be/series/Academic_SeriePreview.mp4",
         "videoCover" : "http://jdlabs.spyweb.be/series/Academic_VideoCover.jpg",
@@ -36,7 +37,45 @@
 
         ]
     },
-    "series": [
+    {
+        "id": "2",
+        "name": "Color Palette",
+        "previewUrl" : "http://jdlabs.spyweb.be/series/ColorPalette_SeriePreview.mp4",
+        "videoCover" : "http://jdlabs.spyweb.be/series/ColorPalette_VideoCover.jpg",
+        "components":[
+            {
+                "id" : "1",
+                "title" : "Title 1 # Palette 1",
+                "previewUrl":"http://jdlabs.spyweb.be/series/ColorPalette/Title1_Palette1.mp4",
+                "videoCover" : "http://jdlabs.spyweb.be/series/Academic_VideoCover.jpg",
+                "items" : [
+                    {
+                        "id" : "1",
+                        "label" : "First word of the title",
+                        "type" : "string"
+                    },
+                    {
+                        "id" : "2",
+                        "label" : "Second word of the title",
+                        "type" : "string"
+                    },
+                    {
+                        "id" : "3",
+                        "label" : "Main color",
+                        "type" : "color"
+                    }
+                ]
+            },
+            {
+                "id" : "2",
+                "title" : "Transition 1 # Palette 1",
+                "previewUrl":"http://jdlabs.spyweb.be/series/ColorPalette/Transition1_Palette1.mp4",
+                "videoCover" : "http://jdlabs.spyweb.be/series/Academic_VideoCover.jpg"
+            }
+        ]
+    }]
+    ,
+    "seriePreviews": [
         {
             "id" : "3",
             "name" : "Milestone",

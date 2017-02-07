@@ -3,6 +3,8 @@ import SerieComponent from 'serieComponent';
 import {Grid, Col, Row, Alert, ButtonToolbar} from 'react-bootstrap';
 import _ from 'lodash';
 
+import VideoPreview from 'videoPreview';
+
 var data = require('./data.json');
 
 
@@ -12,36 +14,39 @@ class Serie extends Component {
   }
 
   render() {
-    /*if (!this.props.document) {
+    
+    const serieId = this.props.params.serieId;    
+    const serie = _.find(data.series, {'id':serieId});
+
+    if(_.isNil(serie)) {
       return (
         <div>
-          <h2>Empty</h2>
+          <h2>Serie not found</h2>
         </div>
       );
-    }*/
+    }
     const serieItems = [];
-    serieItems.push(...data.serie.components.map(component => {
+    serieItems.push(...serie.components.map(component => {
        return (
-          <SerieComponent key={component.id} id={component.id} previewUrl={component.previewUrl}
+          <SerieComponent key={component.id} serie={serie} id={component.id} previewUrl={component.previewUrl}
                       cover={component.videoCover}
                       title={component.title}/>
        );
     }));
     return (
 
-      <div key={data.serie.id}>
+      <div key={serieId}>
         <Row>
           <Col className="col-lg-8 col-md-6 col-xs-12">
-            <video className="video-js" poster={data.serie.videoCover} preload="auto" controls data-setup="{}">
-              <source src={data.serie.previewUrl} type="video/mp4" />
-            </video>
+            <VideoPreview id={serie.id} cover={serie.videoCover} previewUrl={serie.previewUrl}/>
           </Col>
           <Col className="col-lg-4 col-md-6 col-xs-12">
-            <h1>{data.serie.name}</h1>
+            <h1>{serie.name}</h1>
           </Col>
         </Row>
-        
-        {serieItems}
+        <Row>
+          {serieItems}
+        </Row>
       </div>
     );
   }

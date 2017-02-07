@@ -26,6 +26,7 @@
     "react-addons-shallow-compare": "15.1.0",
     "react-autosuggest": "3.7.4",
     "react-bootstrap": "0.29.5",
+    "react-color": "~2.11.1",
     "react-datepicker": "0.27.0",
     "react-dom": "15.1.0",
     "react-dropzone": "3.5.1",

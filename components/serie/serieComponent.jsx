@@ -12,22 +12,20 @@ class SerieComponent extends Component {
   render() {
 
     return (
-      <Row>
-        <Col className="col-lg-3 col-md-6 col-xs-12">
-          <div className="card">
-            <div className="card-header">
-              <Link to={`component/${this.props.id}`} >
-                <VideoPreview id={this.props.id} cover={this.props.cover} previewUrl={this.props.previewUrl}/>
-              </Link>
-            </div>
-            <div className="card-content">
-              <h4>{this.props.title}</h4>
-            </div>
-            <div className="card-footer">
-            </div>
+      <Col className="col-lg-3 col-md-4 col-xs-6">
+        <div className="card">
+          <div className="card-header">
+            <Link to={`/serie/${this.props.serie.id}/${this.props.serie.name}/component/${this.props.id}`} >
+              <VideoPreview id={this.props.id} cover={this.props.cover} previewUrl={this.props.previewUrl}/>
+            </Link>
           </div>
-        </Col>
-      </Row>
+          <div className="card-content">
+            <h4>{this.props.title}</h4>
+          </div>
+          <div className="card-footer">
+          </div>
+        </div>
+      </Col>
     );
   }
 }

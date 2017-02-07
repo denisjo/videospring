@@ -11,14 +11,14 @@ import SerieCustomizerController from 'controllers/serieCustomizerController';
 import SerieController from 'controllers/serieController';
 import Serie from 'serie';
 import Series from 'series';
-import SerieComponent from 'serieComponent';
+import SerieComponentItem from 'serieComponentItem';
 
 export default (
   <div>
     <Router history={browserHistory}>
       <Route path="/" component={App} />
       <Route path="serie/:serieId/:serieName" component={Serie} />
-      <Route path="component/:componentId" component={SerieComponent}/>
+      <Route path="serie/:serieId/:serieName/component/:componentId" component={SerieComponentItem}/>
 
       <Route path="admin" component={AdminController} />
       <Route path="customize" component={SerieCustomizerController} />

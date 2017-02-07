@@ -29,6 +29,7 @@ module.exports = {
   serie: 'components/serie/serie',
   series: 'components/serie/series',
   serieComponent: 'components/serie/serieComponent',
+  serieComponentItem: 'components/serie/serieComponentItem',
   // Common
   collapsibleControl: 'components/common/collapsibleControl',
   loader: 'components/common/loader',

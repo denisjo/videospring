@@ -26,7 +26,7 @@ class Series extends Component {
     }*/
     const series = [];
     
-    series.push(...data.series.map(serie => {
+    series.push(...data.seriePreviews.map(serie => {
        return (
            
             <Col className="col-lg-3 col-md-3 col-xs-6 card" key={serie.id}>
@@ -39,7 +39,6 @@ class Series extends Component {
             </Col>
        );
     }));
-    //className="video-js vjs-fluid"
     return (
 
       <div>
