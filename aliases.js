@@ -26,6 +26,7 @@ module.exports = {
   inputs: 'components/inputs',
 
   //TODO remove all before this
+  home: 'components/serie/home',
   serie: 'components/serie/serie',
   series: 'components/serie/series',
   serieComponent: 'components/serie/serieComponent',
@@ -39,6 +40,8 @@ module.exports = {
   controllers: 'components/controllers/',
 
   // Navigation
+  navbar: 'components/navigation/navbar',
+  footer: 'components/navigation/footer',
   dropDownItem: 'components/navigation/dropDownItem',
   headerMenu: 'components/navigation/headerMenu',
   mainMenu: 'components/navigation/mainMenu',

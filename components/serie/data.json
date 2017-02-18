@@ -52,11 +52,13 @@
                     {
                         "id" : "1",
                         "label" : "First word of the title",
+                        "sublabel" : "The regular font word on the left",
                         "type" : "string"
                     },
                     {
                         "id" : "2",
                         "label" : "Second word of the title",
+                        "sublabel" : "The bold font word on the right",
                         "type" : "string"
                     },
                     {

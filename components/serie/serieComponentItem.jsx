@@ -73,6 +73,7 @@ class SerieComponentItem extends Component {
           return (
             <div className="card-preview">
               <h3>{item.label}</h3>
+              <h5>{item.sublabel}</h5>
               <input id={item.id} value={this.state.inputText} type="text" onChange={this.handleTextChange}/>
             </div>
           );

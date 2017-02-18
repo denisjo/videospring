@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Router, browserHistory} from 'react-router';
+import {Route, Router, IndexRoute, browserHistory} from 'react-router';
 
 import App from 'app';
 //import ViewContractController from 'controllers/viewContractController';
@@ -9,6 +9,8 @@ import App from 'app';
 import AdminController from 'controllers/adminController';
 import SerieCustomizerController from 'controllers/serieCustomizerController';
 import SerieController from 'controllers/serieController';
+
+import Home from 'home';
 import Serie from 'serie';
 import Series from 'series';
 import SerieComponentItem from 'serieComponentItem';
@@ -16,12 +18,15 @@ import SerieComponentItem from 'serieComponentItem';
 export default (
   <div>
     <Router history={browserHistory}>
-      <Route path="/" component={App} />
-      <Route path="serie/:serieId/:serieName" component={Serie} />
-      <Route path="serie/:serieId/:serieName/component/:componentId" component={SerieComponentItem}/>
+      <Route path="/" component={App} >
+        <IndexRoute component={Home} />
+        <Route path="serie/:serieId/:serieName" component={Serie} />
+        <Route path="serie/:serieId/:serieName/component/:componentId" component={SerieComponentItem}/>
 
-      <Route path="admin" component={AdminController} />
-      <Route path="customize" component={SerieCustomizerController} />
+        <Route path="admin" component={AdminController} />
+        <Route path="customize" component={SerieCustomizerController} />
+      </Route>
+      
     </Router>
   </div>
 );
