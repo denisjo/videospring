@@ -29,7 +29,7 @@ class Series extends Component {
     series.push(...data.seriePreviews.map(serie => {
        return (
            
-            <Col className="col-lg-3 col-md-3 col-xs-6 card" key={serie.id}>
+            <Col className="col-lg-4 col-md-4 col-xs-6 " key={serie.id}>
               <div className="card-preview">
                 <Link to={`serie/${serie.id}/${serie.name}/`} >
                   <VideoPreview id={serie.id} cover={serie.videoCover} previewUrl={serie.previewUrl}/>

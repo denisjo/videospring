@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {Grid, Col, Row, Alert, ButtonToolbar} from 'react-bootstrap';
+import {FormGroup, FormControl, InputGroup, Glyphicon} from 'react-bootstrap';
 import {Link} from 'react-router';
 
 import Series from 'series';
@@ -11,7 +11,13 @@ var data = require('./data.json');
 class Home extends Component {
   constructor(props) {
     super(props);
-    
+    this.state = {
+      value: ''
+    };
+  }
+
+  handleChange(e) {
+    this.setState({ value: e.target.value });
   }
 
   render() {
@@ -21,8 +27,26 @@ class Home extends Component {
         <section className="banner">
             <h1>JD Labs Library</h1>
             <h4>The first online library that provides your customized video assets</h4>
-            <p></p>
+            <br />
+            <form>
+              <FormGroup controlId="formBasicText" bsSize="large">
+                <InputGroup>
+                  <FormControl
+                    type="text"
+                    value={this.state.value}
+                    placeholder="Enter text"
+                    onChange={this.handleChange}
+                  />
+                  <InputGroup.Addon>
+                    <Glyphicon glyph="music" />
+                  </InputGroup.Addon>
+                </InputGroup>
+    
+              </FormGroup>
+            </form>
+
         </section>
+        
         <section className="preview">
             <h1>Series</h1>
             <p>Discover our designer quality video elements library for your projects</p>
@@ -35,6 +59,9 @@ class Home extends Component {
 
 /*Serie.propTypes = {
   serieItems: PropTypes.array,
-};*/
+};
+
+
+*/
 
 export default Home;
