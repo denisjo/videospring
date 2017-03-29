@@ -1,2 +1,2 @@
-export const CONTRACT_BASE = '/emi-services/rest/contract/';
-export const EMI_MANAGE_POOL = '/emi/pages/jsf/pool/manage/Pool.faces';
+export const VIDEOASSETS_BASE = 'http://192.168.0.8:8081/';
+
