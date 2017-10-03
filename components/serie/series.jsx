@@ -30,11 +30,14 @@ class Series extends Component {
        return (
            
             <Col className="col-lg-4 col-md-4 col-xs-6 " key={serie.id}>
-              <div className="card-preview">
+              <div className="thumbnail">
                 <Link to={`serie/${serie.id}/${serie.name}/`} >
                   <VideoPreview id={serie.id} cover={serie.videoCover} previewUrl={serie.previewUrl}/>
                 </Link>
-                <h3>{serie.name}</h3>
+                <div className="caption">
+                  <h3>{serie.name}</h3>
+                </div>
+                
               </div>
             </Col>
        );

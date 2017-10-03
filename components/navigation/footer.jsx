@@ -13,6 +13,7 @@ class Footer extends Component {
     
     return (
     <footer>
+    <p>Powered by JD Labs</p>
     </footer>
     );
   }
